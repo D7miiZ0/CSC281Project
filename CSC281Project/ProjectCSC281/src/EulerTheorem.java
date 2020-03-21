@@ -27,14 +27,13 @@ public class EulerTheorem {
 
 		int gcd = 1;
 
-		for (int i = 1; i <= x && i <= y; i++)
+		for (int i = 2; i <= x && i <= y; i++)
 			if (x % i == 0 && y % i == 0)
-				gcd = i;
+				return false;
 
-		if (gcd == 1)
-			return true;
-		else
-			return false;
+		return true;
+
+		
 
 	}
 
@@ -106,7 +105,7 @@ public class EulerTheorem {
 		} else
 			return 111;
 
-		return LastTwoDig;
+		return Math.abs(LastTwoDig);
 	}
 
 }
