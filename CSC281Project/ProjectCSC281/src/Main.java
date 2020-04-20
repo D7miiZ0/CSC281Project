@@ -12,6 +12,20 @@ public class Main {
 
 		int num1 = in.nextInt(), num2 = in.nextInt(), num3 = in.nextInt();
 
+		if ((num2 == 0 && num3 == 0) || (num1 == 0 && num2 == 0)) {
+
+			System.out.println("Can not compute 0 ^ 0");
+
+			System.exit(0);
+
+		} else if (num2 < 0 || num3 < 0) {
+
+			System.out.println("Can not compute fractional numbers");
+
+			System.exit(0);
+
+		}
+
 		EulerTheorem E = new EulerTheorem(num1, num2, num3);
 
 		int LastTwoDigits = E.CalculateLastTwoDig();
